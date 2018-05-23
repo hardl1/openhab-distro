@@ -1,12 +1,11 @@
-sitemap demo label="Main Menu"
+sitemap MH label="Hauptmenü"
 {
 	Frame {
-		Group item=gFF label="First Floor" icon="firstfloor"
-		Group item=gGF label="Ground Floor" icon="groundfloor"
-		Group item=gC label="Cellar" icon="cellar"
-		Group item=Garden icon="garden"
-	}
-	Frame label="Weather" {
+		Group item=gKE label="Keller" icon="Keller"
+		Group item=gWO label="Wohnung" icon="Wohnung"
+		Group item=gBA label="Balkon" icon "Balkon"
+		Group item=gTE label=Terrasse" icon="Terrasse"
+	Frame label="Wetter" {
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="NULL"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
 			Frame {
 				Text item=Weather_Temp_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
@@ -30,9 +29,9 @@ sitemap demo label="Main Menu"
 			Text item=Moon_Phase
 		}
 	}
-	Frame label="Demo" {
+	Frame label="Haus" {
 		Text item=CurrentDate
-		Text label="Group Demo" icon="firstfloor" {
+		Text label="Mein Haus" icon="Wohnung" {
 			Switch item=Lights mappings=[OFF="All Off"]
 			Group item=Heating
 			Group item=Windows
